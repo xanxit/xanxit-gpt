@@ -28,8 +28,8 @@ const handleSearch = (
   };
   setChatHistory((prev) => [...prev, newObj]);
   setPrompt("");
-  setShowQnA((prev) => !prev);
-  setQnAPrompt(newObj);
+  setShowQnA(true);
+  setQnAPrompt((prev) => [...prev, newObj]);
 };
 
 export default handleSearch;

@@ -18,7 +18,7 @@ function App() {
   });
   const [recentPrompt, setRecentPrompt] = useState("");
   const [showQnA, setShowQnA] = useState(false);
-  const [qnaPrompt, setQnAPrompt] = useState(null);
+  const [qnaPrompt, setQnAPrompt] = useState([]);
   useEffect(() => {
     const currentDate = new Date().getDate();
     const updatedChatHistory = {
