@@ -57,14 +57,14 @@ This app needs to look and feel exactly like chat GPT, provided we have all the 
     });
     
     ```
-    - We also provide a search on click feature, when someone clicks on the chat history prompts, it gives back the prompt and their result on the QnA Panel, and one can also search other stuff under the same prompt.
+    - We also provide a search-on-click feature, when someone clicks on the chat history prompts, it gives back the prompt and their result on the QnA Panel, and one can also search other stuff under the same prompt.
 
 
   3. #### QnAPanel:
 
     - When searched or clicked on a prompt from chat history, the screen that shows the conversation between the AI and the user is depicted in this panel.
 
-    - We have used an array of qnAPrompts to facilitate chaining of prompts in conversational manner to give a pretty good look and feel of chat GPT.
+    - We have used an array of qnAPrompts to facilitate the chaining of prompts conversationally to give a pretty good look and feel of chat GPT.
 
   ### Component System Design (FigJam)
 
@@ -73,5 +73,23 @@ This app needs to look and feel exactly like chat GPT, provided we have all the 
 
 - ### Scalability
 
-  This app is not scalable enough right now but can be made scalable using certain parameters
+  This app is not scalable enough right now but can be made scalable using certain parameters.
+
+  1. Authorization and authentication: We can authenticate and authorize different users when trying to access data so that their data can be distinct.
   
+  2. Less re-rendering: We have already optimized a lot using useEffect and other react hooks in an optimized manner but we can use other hooks like useMemo and useCallback for memoized (cached) data and limit the functional re-render once API is connected.
+
+  3. Component-state management: We need to find a suitable component-state management system following the depth of the application. If needed to maintain a global state, we can use redux to facilitate global state management, or context API in terms of the scope of the app. We can even persist the state on refresh to enhance scalability.
+
+  4. Performance measuring: We need to find proper ways to measure the performance via First contentful paint, Speed index, Time to interact metrics.
+
+- ### Maintainability
+
+  1. Use a consistent coding style: By using a consistent coding style, you can improve the readability, quality, and collaboration of your code. You can use tools like ESLint, Prettier, or Stylelint to enforce and automate your coding style.
+
+  2. Organize your files and folders: A good file and folder structure can help you find, reuse, and update your code easily. 
+
+  3. Adopt a component-based architecture: A component-based architecture is a design pattern that divides your front-end code into reusable and isolated units called components. Components can have their own state, logic, and presentation, and can communicate with each other through props and events.  By adopting a component-based architecture, you can scale your front-end code by composing complex interfaces from simple components.
+
+  4. Write unit tests and integration tests: Testing is an essential practice for ensuring the quality and reliability of your front-end code. Testing can help you detect and prevent bugs, refactor and improve your code, and document your functionality.
+
