@@ -4,14 +4,14 @@ import { FaUserCircle } from "react-icons/fa";
 
 const QnAPanel = ({ qnaPrompt }) => {
   return (
-    <div className="mb-20 mt-20 p-4 md:mt-10 lg:ml-20">
+    <div className="mb-20 mt-20 p-4 flex md:mt-10 lg:ml-20">
       {qnaPrompt.map((ele, idx) => (
         <div className="mb-10" key={idx}>
           <div className="flex gap-x-4 items-center">
             <FaUserCircle className="h-8 w-auto" />
             <p className="text-lg">{ele.prompt}</p>
           </div>
-          <div className="mt-10 max-w-md lg:max-w-5xl 2xl:max-w-7xl flex gap-x-4 items-start">
+          <div className="mt-10 max-w-md lg:max-w-5xl flex gap-x-4 items-start">
             <img
               src="https://static.cdnlogo.com/logos/c/38/ChatGPT.svg"
               className="h-8 w-auto"
