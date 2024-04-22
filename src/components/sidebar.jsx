@@ -72,7 +72,7 @@ const SideBar = ({ structuredChatHistory, setQnAPrompt, setShowQnA }) => {
                 {value.map((ele, idx) => (
                   <p
                     onClick={() => {
-                      setQnAPrompt(ele);
+                      setQnAPrompt((prev) => [...prev, ele]);
                       setShowQnA(true);
                     }}
                     key={idx}
