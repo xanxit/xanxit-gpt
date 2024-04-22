@@ -67,7 +67,10 @@ const SideBar = ({ structuredChatHistory, setQnAPrompt, setShowQnA }) => {
           </button>
           <div className="p-2 lg:-mt-4">
             {Object.entries(structuredChatHistory || {}).map(([key, value]) => (
-              <div className="flex flex-col py-2" key={key}>
+              <div
+                className={value.length > 0 ? `flex flex-col py-2` : "hidden"}
+                key={key}
+              >
                 <h1 className="text-md text-white mb-2">{`${key}`}</h1>
                 {value.map((ele, idx) => (
                   <p
