@@ -4,7 +4,7 @@ import { FaUserCircle } from "react-icons/fa";
 
 const QnAPanel = ({ qnaPrompt }) => {
   return (
-    <div className="mb-20 mt-20 p-4 flex md:mt-10 lg:ml-20">
+    <div className="mb-20 mt-20 p-4 md:mt-10 lg:ml-20">
       {qnaPrompt.map((ele, idx) => (
         <div className="mb-10" key={idx}>
           <div className="flex gap-x-4 items-center">
